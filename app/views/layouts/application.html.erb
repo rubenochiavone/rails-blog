@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>My Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+    <!-- Header -->
+    <section id="header">
+	    <header>
+		    <span class="image avatar"><%= image_tag "avatar.jpg" %></span>
+		    <h1 id="logo"><a href="#">Ruben O. Chiavone</a></h1>
+		    <p>Lorem Ipsum is simply dummy text of<br />
+		    the printing and typesetting industry</p>
+	    </header>
+	    <nav id="nav">
+		    <ul>
+		        <li><%= link_to 'Home', controller: 'welcome', action: 'index' %></li>
+			    <li><%= link_to 'About', controller: 'welcome', action: 'about' %></li>
+			    <li><%= link_to 'Latest Articles', controller: 'welcome', action: 'index', anchor: "latest_articles" %></li>
+			    <!--<li><a href="#three">Contact</a></li>-->
+		    </ul>
+	    </nav>
+	    <footer>
+		    <ul class="icons">
+			    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+			    <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+			    <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+		    </ul>
+	    </footer>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+	    <!-- Main -->
+	    <div id="main">
+
+	    <%= yield %>
+
+	    <!-- Footer -->
+	    <section id="footer">
+		    <div class="container">
+			    <ul class="copyright">
+				    <li>&copy; 2015 My Blog. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			    </ul>
+		    </div>
+	    </section>
+
+    </div>
 
 </body>
 </html>

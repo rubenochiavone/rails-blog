@@ -1,0 +1,11 @@
+<article>
+    <%= link_to image_tag("pic01.jpg"), article_path(article), class: "image" %>
+    <div class="inner">
+	    <h4><%= link_to article.title, article_path(article) %></h4>
+	    <p>
+	        <%= article.text[0..124] %>
+	        <%= ' [...] ' if article.text.length > 125 %>
+	        <%= link_to 'Read more', article_path(article) if article.text.length > 125 %>
+        </p>
+    </div>
+</article>

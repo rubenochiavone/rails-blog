@@ -1,2 +1,51 @@
-<h1>Hello, Rails!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<!-- One -->
+<section id="one">
+	<div class="container">
+		<header class="major">
+			<h2>My Blog</h2>
+			<p>Just a nice place to post my stuff<br />
+			and you can also follow me on <a href="https://github.com/rubenochiavone">Github</a>.</p>
+		</header>
+		<!-- <p>...</p> -->
+	</div>
+</section>
+
+<!-- Two -->
+<section>
+	<div id="latest_articles" class="container">
+		<h3>Latest posts</h3>
+		<!-- <p>...</p> -->
+		<div class="features">
+		    <%= render @latest_articles %>
+		</div>
+	</div>
+</section>
+
+<!-- Three
+<section id="three">
+	<div class="container">
+		<h3>Contact Me</h3>
+		<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+		<form method="post" action="#">
+			<div class="row uniform">
+				<div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
+				<div class="6u 12u(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
+			</div>
+			<div class="row uniform">
+				<div class="12u"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+			</div>
+			<div class="row uniform">
+				<div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+			</div>
+			<div class="row uniform">
+				<div class="12u">
+					<ul class="actions">
+						<li><input type="submit" class="special" value="Send Message" /></li>
+						<li><input type="reset" value="Reset Form" /></li>
+					</ul>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+ -->

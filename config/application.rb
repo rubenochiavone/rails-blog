@@ -25,6 +25,6 @@ module Blog
     
     # Others conf
     NAME = "MyBlog"
-    VERSION = "0.1.1"
+    VERSION = "0.2"
   end
 end

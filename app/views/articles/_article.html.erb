@@ -3,7 +3,7 @@
     <div class="inner">
 	    <h4><%= link_to article.title, article_path(article) %></h4>
 	    <p>
-	        <%= article.text[0..124] %>
+	        <%= strip_tags(article.text[0..124]) %>
 	        <%= ' [...] ' if article.text.length > 125 %>
 	        <%= link_to 'Read more', article_path(article) if article.text.length > 125 %>
         </p>
